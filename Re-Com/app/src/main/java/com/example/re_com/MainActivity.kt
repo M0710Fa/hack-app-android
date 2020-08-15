@@ -10,13 +10,20 @@ import android.widget.BaseExpandableListAdapter
 import android.widget.ExpandableListView
 import android.widget.TextView
 import android.widget.Toast
-
+import android.content.Intent
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+        start_button.setOnClickListener {
+            val intent = Intent(application, SurveyActivity::class.java)
+            startActivity(intent)
+        }
 
         //親要素のリスト
         val parts: MutableList<String> = ArrayList()
@@ -145,4 +152,9 @@ class MainActivity : AppCompatActivity() {
             this.listExplains = listExplains
         }
     }
+
 }
+
+
+
+
