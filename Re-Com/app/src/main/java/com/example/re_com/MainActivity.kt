@@ -6,10 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseExpandableListAdapter
-import android.widget.ExpandableListView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,10 +50,12 @@ class MainActivity : AppCompatActivity() {
 
         //ExpandableListViewの初期化
         val exListView = findViewById<ExpandableListView>(R.id.exlistview)
+        val header = View.inflate(this,R.layout.header_layout,null)
+        exListView.addHeaderView(header)
         val adapter = ExplainsPartsListAdapter(this, parts, explains)
         exListView.setAdapter(adapter)
         exListView.setOnChildClickListener { parent, v, groupPosition, childPosition, id -> //子要素をタップした時の処理
-            //このサンプルではToastメッセージを表示するだけ
+            //Toastメッセージを表示する
             val adapter1 = parent.expandableListAdapter as ExplainsPartsListAdapter
             val partsname = adapter1.getGroup(groupPosition) as String //親要素からメーカー名を取得
             val carname = adapter1.getChild(groupPosition, childPosition) as String //子要素から車名を取得
@@ -67,11 +66,10 @@ class MainActivity : AppCompatActivity() {
 
     internal inner class ExplainsPartsListAdapter(context: Context, listParts: List<String>, listExplains: List<List<String>>) : BaseExpandableListAdapter() {
         //メンバ変数
-        var listParts //親要素のリスト
-                : List<String>
-        var listExplains //子要素のリスト
-                : List<List<String>>
+        var listParts : List<String>//親要素のリスト
+        var listExplains : List<List<String>>//子要素のリスト
         var context: Context
+
         override fun getGroupCount(): Int {
             return listParts.size //親要素の数を返す
         }
