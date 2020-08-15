@@ -1,17 +1,24 @@
 package com.example.re_com
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        start_button.setOnClickListener {
+            val intent = Intent(application, SurveyActivity::class.java)
+            startActivity(intent)
+        }
 
         //親要素のリスト
         val parts: MutableList<String> = ArrayList()
@@ -19,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         for(partsName in partsArray){
             parts.add(partsName)
         }
+
 
         //子要素のリスト
         val explainsOs: MutableList<String> = ArrayList()
@@ -50,8 +58,8 @@ class MainActivity : AppCompatActivity() {
 
         //ExpandableListViewの初期化
         val exListView = findViewById<ExpandableListView>(R.id.exlistview)
-        val header = View.inflate(this,R.layout.header_layout,null)
-        exListView.addHeaderView(header)
+        //val header = View.inflate(this,R.layout.header_layout,null)
+        //exListView.addHeaderView(header)
         val adapter = ExplainsPartsListAdapter(this, parts, explains)
         exListView.setAdapter(adapter)
         exListView.setOnChildClickListener { parent, v, groupPosition, childPosition, id -> //子要素をタップした時の処理
