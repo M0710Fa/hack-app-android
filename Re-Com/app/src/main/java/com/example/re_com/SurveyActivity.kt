@@ -27,7 +27,6 @@ for(i in 0..1){
     button_2.setOnClickListener {
         Toast.makeText(this, "本当にそれでいいの？", Toast.LENGTH_SHORT).show()
 
-
     }
     button_3.setOnClickListener {
         Toast.makeText(this, "君ってスタバにmac持って行きそう", Toast.LENGTH_SHORT).show()
