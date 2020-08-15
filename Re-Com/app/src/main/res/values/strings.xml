@@ -1,5 +1,38 @@
 <resources>
     <string name="app_name">Re-Com</string>
+    <string name="result_text">あなたの結果は...</string>
+
+    /*------質問文------*/
+    <string-array name="q_sentences">
+        <item>パソコンの使用用途を選択してください</item>
+        <item>どのようなゲームをプレイされる予定ですか？</item>
+        <item>どのようなものを開発される予定ですか？</item>
+        <item>どのようなものを制作をされますか？</item>
+        <item>どのような用途を考えていますか？</item>
+    </string-array>
+
+    /*------質問選択肢------*/
+    <string-array name="questions">
+        <item>ゲーム</item>
+        <item>ソフトウェア開発</item>
+        <item>クリエイティブ(ソフトウェア開発を除く)</item>
+        <item>その他</item>
+        <item>VRゲーム</item>
+        <item>3Dゲーム</item>
+        <item>2Dゲーム</item>
+        <item>それ以外</item>
+        <item>ブラウザ・ノベルゲーム</item>
+        <item>VRゲーム</item>
+        <item>ゲーム開発</item>
+        <item>アプリ開発</item>
+        <item>iOS開発</item>
+        <item>3Dモデリング</item>
+        <item>イラスト</item>
+        <item>音楽</item>
+        <item>動画</item>
+        <item>ネットサーフィン</item>
+        <item>Office用途</item>
+    </string-array>
 
     /*------パーツ名の配列------*/
     <string-array name="parts_array">
