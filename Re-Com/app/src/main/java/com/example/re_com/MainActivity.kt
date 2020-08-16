@@ -14,10 +14,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    companion object {
-        const val EXTRA_MESSAGE = "com.example.kotlinactivitydatatrans.MESSAGE"
-    }
-    private val RESULT_SUBACTIVITY = 1000
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,8 +24,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(application, SurveyActivity::class.java)
             startActivity(intent)
 
-
-            startActivityForResult(intent, RESULT_SUBACTIVITY)
         }
 
 
