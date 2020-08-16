@@ -22,7 +22,7 @@
         <item>2Dゲーム</item>
         <item>それ以外</item>
         <item>ブラウザ・ノベルゲーム</item>
-        <item>VRゲーム</item>
+        <item>VR開発</item>
         <item>ゲーム開発</item>
         <item>アプリ開発</item>
         <item>iOS開発</item>
@@ -33,6 +33,52 @@
         <item>ネットサーフィン</item>
         <item>Office用途</item>
     </string-array>
+
+    /*------診断結果------*/
+    <string-array name="results_word">
+        <item>あなたにはハイスペックなパソコンが必要です！！</item>
+        <item>あなたにはミドルクラスと言われる性能のパソコンで十分です．</item>
+        <item>あなたは大体のパソコンであれば要件を満たすことができます．好きに選んでくださいね！</item>
+        <item>あなたにはApple社のMacが必要なようです．</item>
+    </string-array>
+
+
+    <string name="budget">だいたい予算は</string>
+    <string-array name="result_prices">
+        <item>20万円から</item>
+        <item>13万円から</item>
+        <item>6万円から</item>
+        <item>機種による</item>
+    </string-array>
+
+    <string name="word">こういうワードを検索してみて！！</string>
+    <string-array name="result_keywords">
+        <item>Core i9，Core i7，RTX2080Ti，RTX2080，RTX2070Super</item>
+        <item>Core i7，Core i5，RTX2070，RTX2060</item>
+        <item>Core i3，Core i5，GTX1160</item>
+        <item>Mac Pro，iMac，Macbook</item>
+    </string-array>
+    
+    <string name="result_high">
+        あなたが想定していることは，パソコンにかなり重い処理をさせることになりそうです！\n
+        よりよいパーツを吟味し，あなただけのパソコンを作り上げましょう！！\n
+    </string>
+    <string name="result_middle">
+        あなたの想定していることは，パソコンにそれなりの負荷がかります！\n
+        より安く，その中でもより高性能に！\n
+        インターネットを駆使して自分だけのパソコンを組み立てましょう！！\n
+    </string>
+    <string name="result_low">
+        あなたの想定していることは，それなりのパソコンが有ればできてしまいますね！\n
+        しかし，変に格安パソコンを買ってしまうと何もできなかったりしてしまいますよ！\n
+        お安く自作パソコンしませんか？\n
+    </string>
+    <string name="result_mac">
+        あたなが想定していることは,Apple社のMacと言われているパソコンが必要になりそうです！\n
+        OSがWindowsとはことなりMacOSになります．\n
+        エンジニアやデザイナーによく愛されているパソコンですね．\n
+        素敵なデザインのデバイスが揃ってますからぜひ買ってみてくださいね！\n
+    </string>
 
     /*------パーツ名の配列------*/
     <string-array name="parts_array">
