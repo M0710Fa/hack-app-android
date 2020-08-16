@@ -1,5 +1,6 @@
 package com.example.re_com
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -11,13 +12,20 @@ import android.widget.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    companion object {
+        const val EXTRA_MESSAGE = "com.example.kotlinactivitydatatrans.MESSAGE"
+    }
+
+    private val RESULT_SUBACTIVITY = 1000
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         start_button.setOnClickListener {
-            val intent = Intent(application, SurveyActivity::class.java)
-            startActivity(intent)
+            val intentSub = Intent(application, SurveyActivity::class.java)
+            startActivityForResult(intentSub, RESULT_SUBACTIVITY)
         }
 
         //親要素のリスト
@@ -69,6 +77,18 @@ class MainActivity : AppCompatActivity() {
             val carname = adapter1.getChild(groupPosition, childPosition) as String //子要素から車名を取得
             Toast.makeText(applicationContext, "$partsname : $carname", Toast.LENGTH_LONG).show() //Toast生成
             true
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, intent: Intent?) {
+        super.onActivityResult(requestCode, resultCode, intent)
+
+        if (resultCode == Activity.RESULT_OK &&
+            requestCode == RESULT_SUBACTIVITY && intent != null) {
+            val res = intent.extras?.getString(EXTRA_MESSAGE)?: ""
+            val intentR = Intent(application, ResultActivity::class.java)
+            intentR.putExtra(MainActivity.EXTRA_MESSAGE, res)
+            startActivityForResult(intentR, RESULT_SUBACTIVITY)
         }
     }
 
