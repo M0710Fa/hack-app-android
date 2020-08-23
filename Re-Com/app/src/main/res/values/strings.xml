@@ -1,0 +1,144 @@
+<resources>
+    <string name="app_name">Re-Com</string>
+    <string name="survey_title">あなたにあったパソコン診断</string>
+    <string name="survey_explain">あなたの用途に合わせて，おすすめのパソコンを表示します</string>
+    <string name="result_text">あなたの結果は...</string>
+
+    <string name="explain_intro">　パソコンを買う際に必要なパーツの知識</string>
+
+    /*------質問文------*/
+    <string-array name="q_sentences">
+        <item>パソコンの使用用途を選択してください</item>
+        <item>どのようなゲームをプレイされる予定ですか？</item>
+        <item>どのようなものを開発される予定ですか？</item>
+        <item>どのようなものを制作をされますか？</item>
+        <item>どのような用途を考えていますか？</item>
+    </string-array>
+
+    /*------質問選択肢------*/
+    <string-array name="questions">
+        <item>ゲーム（特にVR）</item>
+        <item>ゲーム</item>
+        <item>ゲーム開発</item>
+        <item>アプリケーション開発</item>
+        <item>iOS開発</item>
+        <item>3Dモデリング</item>
+        <item>音楽，イラスト</item>
+        <item>それ以外</item>
+    </string-array>
+
+    /*------診断結果------*/
+    <string-array name="results_word">
+        <item>あなたにはハイスペックなパソコンが必要です！！</item>
+        <item>あなたにはミドルクラスと言われる性能のパソコンで十分です．</item>
+        <item>あなたは大体のパソコンであれば要件を満たすことができます．好きに選んでくださいね！</item>
+        <item>あなたにはApple社のMacが必要なようです．</item>
+    </string-array>
+
+
+    <string name="budget">だいたい予算は</string>
+    <string-array name="result_prices">
+        <item>　20万円～</item>
+        <item>　13万～</item>
+        <item>　6万円～</item>
+        <item>　機種による</item>
+    </string-array>
+
+    <string name="word">こういうワードを検索してみて！！</string>
+    <string-array name="result_keywords">
+        <item>Core i9，Core i7，Ryzen9，Ryzen7，RTX2080Ti，RTX2080，RTX2070Super</item>
+        <item>Core i7，Core i5，Ryzen7，Ryzen5，RTX2070，RTX2060</item>
+        <item>Core i3，Core i5，Ryzen3，GTX1160</item>
+        <item>Mac Pro，iMac，Macbook</item>
+    </string-array>
+
+    <string name="result_high">
+        　あなたが想定していることは，パソコンにかなり重い処理をさせることになりそうです！\n
+        よりよいパーツを吟味し，あなただけのパソコンを作り上げましょう！！\n
+    </string>
+    <string name="result_middle">
+        　あなたの想定していることは，パソコンにそれなりの負荷がかります！\n
+        より安く，その中でもより高性能に！\n
+        インターネットを駆使して自分だけのパソコンを組み立てましょう！！\n
+    </string>
+    <string name="result_low">
+        　あなたの想定していることは，それなりのパソコンが有ればできてしまいますね！\n
+        しかし，変に格安パソコンを買ってしまうと何もできなかったりしてしまいますよ！\n
+        お安く自作パソコンしませんか？\n
+    </string>
+    <string name="result_mac">
+        　あたなが想定していることは,Apple社のMacと言われているパソコンが必要になりそうです！\n
+        OSがWindowsとはことなりMacOSになります．\n
+        エンジニアやデザイナーに愛されているパソコンですね．\n
+        素敵なデザインのデバイスが揃ってますからぜひ買ってみてくださいね！\n
+    </string>
+
+    /*------パーツ名の配列------*/
+    <string-array name="parts_array">
+        <item>オペレーティングシステム</item>
+        <item>CPU</item>
+        <item>グラフィックボード(GPU)</item>
+        <item>メモリー</item>
+        <item>SSD</item>
+        <item>ハードディスク</item>
+        <item>マザーボード</item>
+        <item>電源</item>
+    </string-array>
+
+    /*------説明文の配列------*/
+    //OS
+    <string name = "ex_os">
+        　オペレーティングシステムとは，コンピューターを動作させるための基盤となるプログラムのことです．\n
+        略してOSとも呼ばれます．\n
+        有名なものではWinows，MacOS，Linuxがあります．\n
+        基本的にゲームを用途としたパソコンではWinodowsが選ばれます．\n
+    </string>
+
+    //CPU
+    <string name = "ex_cpu">
+        　CPUとはパソコンにおいてプログラムの演算や実行をしてくれるパーツです．\n
+        Central Processing Unit（中央処理装置）の略でCPUと呼ばれています．\n
+        　よく人間で言う頭脳に例えられます．\n
+    </string>
+
+    //グラフィックボード
+    <string name="ex_gpu">
+        　グラフィックボードとは，映像処理に関わる演算や映像をモニターに写す処理などを担っています．\n
+        Graphic Processing Unitの略でGPUとも呼ばれています．\n
+        　ゲームをプレイする場合，グラフィックボードの性能が肝となります．\n
+        　ゲーミングPCを購入する際は，自分のプレイしたいゲームとグラフィックボードの性能に気をつけて購入することが大切です．\n
+    </string>
+
+    //メモリー
+    <string name="ex_memory">
+        　メモリーは，データを一時的に記憶するの役割を果たしています．\n
+        パソコンは起動しているアプリケーションのデータなどをメモリーに記憶するため，メモリーの容量が多いほうが一度にたくさんのデータを処理できます．\n
+        　ゲームや，エミュレーターなど1度にたくさんのデータを処理するアプリケーションを実行する際も，メモリの容量が重要になります．\n
+    </string>
+
+
+    <string name="ex_ssd">
+        　SSDとは，データを保存する場所です．\n
+        Solid State Driveを略してSSDと呼ばれています．\n
+        　今までは，後述のハードディスク(HDD)が主流でしたが，ハードディスクに比べて読み書きの動作が速いことから最近ではほとんどのパソコンでSSDが採用されています．\n
+        SSDにゲームを入れることで，ロード時間などを短縮することに繋がります．\n
+    </string>
+
+    <string name="ex_hdd">
+        　ハードディスクとは，データを保存する場所です．\n
+        前述のSSDに比べて，読書の速度，耐衝撃性は劣っていますが，大容量のものでもSSDより安価に購入することができます．\n
+        大容量データの保存用途でよく使われています．\n
+    </string>
+
+    <string name="ex_mother">
+        　マザーボードとは，CPUやグラフィックボード，メモリなどを搭載するための基盤のことです．\n
+        すべてのパーツを繋ぐ役割もあるため，より耐久性の高いものを選ぶことがパソコンを長持ちさせることに繋がります．\n
+    </string>
+
+    <string name="ex_power">
+        　その名の通りコンピューターの電源です．\n
+        人間に例えると心臓に例えられるほど重要なパーツです．\n
+        　よりハイスペックなパソコンにはより大容量の電源が必要になります．\n
+    </string>
+
+</resources>
